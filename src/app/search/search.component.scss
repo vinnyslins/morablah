@@ -1,0 +1,10 @@
+@import "../../styles/global/variables";
+
+.container-fluid {
+  background-color: map-get($colors, 'primary');
+  padding: 15px;
+
+  .btn {
+    margin-right: 10px;
+  }
+}

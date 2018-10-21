@@ -10,6 +10,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { PropertyComponent } from './property/property.component';
 import { ChatComponent } from './chat/chat.component';
 import { ContractComponent } from './contract/contract.component';
+import { SearchComponent } from './search/search.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     SearchResultComponent,
     PropertyComponent,
     ChatComponent,
-    ContractComponent
+    ContractComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
