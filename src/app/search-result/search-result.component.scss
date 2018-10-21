@@ -1,0 +1,60 @@
+@import "../../styles/global/variables";
+
+.container-fluid {
+  margin-top: 15px;
+
+  .item {
+    padding: 5px 10px 5px 10px;
+    margin-left: 10px;
+    border: 1px solid;
+    border-radius: 15px;
+
+    .fa-times {
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    font-weight: bold;
+    color: map-get($colors, 'primary');
+  }
+
+  .content-right {
+    float: right;
+  }
+
+  .content {
+    margin-bottom: 50px;
+    margin-top: 5px;
+  }
+
+  .card {
+    margin-top: 15px;
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 240px;
+      max-height: 180px;
+      border-radius: 5px;
+    }
+
+    p {
+      &.title {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 14px;
+        color: map-get($colors, 'dark');
+      }
+      &.description {
+        margin: 0;
+        font-size: 12px;
+        color: map-get($colors, 'light');
+      }
+    }
+  }
+}
