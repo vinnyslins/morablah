@@ -13,6 +13,7 @@ import { ContractComponent } from './contract/contract.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', redirectTo: '/', pathMatch: 'full' },
   { path: 'resultado-de-busca', component: SearchResultComponent },
   { path: 'imovel', component: PropertyComponent },
   { path: 'chat', component: ChatComponent },
