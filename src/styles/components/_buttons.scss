@@ -1,0 +1,61 @@
+.btn {
+  border-radius: 18px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1.5px solid;
+  min-width: 130px;
+}
+
+.btn-primary {
+  background-color: map-get($colors, 'color-white');
+  border-color: map-get($colors, 'primary');
+  color: map-get($colors, 'primary');
+
+  &:hover {
+    background-color: map-get($colors, 'primary');
+    border-color: map-get($colors, 'primary');
+    color: map-get($colors, 'color-white');
+  }
+
+  &:active, &:focus {
+    background-color: darken(map-get($colors, 'primary'), 10%)!important;
+    border-color: darken(map-get($colors, 'primary'), 10%)!important;
+    color: map-get($colors, 'color-white');
+  }
+}
+
+.btn-secondary {
+  background-color: map-get($colors, 'primary');
+  border-color: map-get($colors, 'primary');
+  color: map-get($colors, 'color-white');
+
+  &:hover {
+    background-color: darken(map-get($colors, 'primary'), 10%)!important;
+    border-color: darken(map-get($colors, 'primary'), 10%)!important;
+    color: map-get($colors, 'color-white');
+  }
+
+  &:active, &:focus {
+    background-color: darken(map-get($colors, 'primary'), 15%)!important;
+    border-color: darken(map-get($colors, 'primary'), 15%)!important;
+    color: map-get($colors, 'color-white');
+  }
+}
+
+.btn-tertiary {
+  background-color: map-get($colors, 'primary');
+  border-color: map-get($colors, 'white');
+  color: map-get($colors, 'color-white');
+
+  &:hover {
+    background-color: map-get($colors, 'color-white');
+    border-color: map-get($colors, 'color-white');
+    color: map-get($colors, 'primary');
+  }
+
+  &:active, &:focus {
+    background-color: map-get($colors, 'color-white');
+    border-color: map-get($colors, 'color-white');
+    color: map-get($colors, 'primary');
+  }
+}
