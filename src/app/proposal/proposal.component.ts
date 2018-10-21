@@ -32,7 +32,9 @@ export class ProposalComponent implements OnInit {
     this.route.params.subscribe(params => {
       const id = +params['id'];
       this.propertiesService.doneProposal(id).then(response => {
-        // @TODO: Redirecionar para a página de sucesso
+        this.router.navigate(['/contrato']);
+      }).catch(error => {
+        // @TODO: Fazer tratativa de erro
       });
     });
   }

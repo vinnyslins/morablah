@@ -1,0 +1,32 @@
+@import "../../styles/global/variables";
+
+.container-fluid {
+  background-color: map-get($colors, 'primary');
+  height: 80px;
+}
+
+.content {
+  margin-top: 80px;
+
+  .fa-check {
+    font-size: 64px;
+    margin-left: 45%;
+    color: #20bf6b;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-bottom: 0;
+  }
+
+  .description {
+    margin-left: 17%;
+  }
+
+  .btn-secondary {
+    margin-top: 10px;
+    margin-left: 35%;
+  }
+}

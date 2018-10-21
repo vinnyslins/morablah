@@ -15,14 +15,14 @@
       <ul>
         <div class="checkbox" *ngFor="let item of proposal.clauses">
           <label>
-            <input type="checkbox">{{ item.title }}
+            <input type="checkbox" checked>{{ item.title }}
           </label>
         </div>
       </ul>
       <hr>
       <a>Adicionar novo requisito</a>
       <hr>
-      <div class="btn btn-secondary" (click)="doneProposal()">Finalizar e fazer pré-contratos</div>
+      <div class="btn btn-secondary" (click)="doneProposal()">Finalizar e fazer pré-contrato</div>
     </div>
   </div>
 </div>
