@@ -21,8 +21,8 @@ import { ProposalComponent } from './proposal/proposal.component';
 registerLocaleData(ptBr);
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: 'resultado-de-busca', pathMatch: 'full' },
+  { path: 'home', redirectTo: 'resultado-de-busca', pathMatch: 'full' },
   { path: 'resultado-de-busca', component: SearchResultComponent },
   { path: 'imovel/:id', component: PropertyComponent },
   { path: 'group/:id', component: GroupComponent },
