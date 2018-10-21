@@ -1,3 +1,25 @@
-<p>
-  chat works!
-</p>
+<!-- @TODO: Exibir botão de voltar -->
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <ul>
+      <li *ngFor="let message of chat" [ngClass]="message.sender ? 'sented' : 'received'">
+        {{ message.message }}
+      </li>
+    </ul>
+    <div class="container-fluid footer">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Mensagem">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Enviar</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="buttons">
+    <button class="btn btn-tertiary" (click)="createProposal()">Aceito dividir o apê</button>
+    <button class="btn btn-tertiary">Sair do chat</button>
+  </div>
+</div>

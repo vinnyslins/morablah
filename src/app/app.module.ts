@@ -16,6 +16,7 @@ import { ContractComponent } from './contract/contract.component';
 import { SearchComponent } from './search/search.component';
 import { GroupComponent } from './group/group.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProposalComponent } from './proposal/proposal.component';
 
 registerLocaleData(ptBr);
 
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
   { path: 'resultado-de-busca', component: SearchResultComponent },
   { path: 'imovel/:id', component: PropertyComponent },
   { path: 'group/:id', component: GroupComponent },
-  { path: 'chat', component: ChatComponent },
+  { path: 'group/:id/chat', component: ChatComponent },
+  { path: 'proposal/:id', component: ProposalComponent },
   { path: 'contrato', component: ContractComponent },
   { path: '**', component: NotFoundComponent }
 ];
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     ContractComponent,
     SearchComponent,
     GroupComponent,
-    FooterComponent
+    FooterComponent,
+    ProposalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <!-- @TODO: botão voltar -->
+  <img class="avatar" [src]="proposal.person_one?.avatar">
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <p class="title center">{{ proposal.person_one?.name }}</p>
+      <p class="description center">Publicitária | Membro desde {{ proposal.person_one?.created_at | date: 'd MMM' }}</p>
+      <hr>
+      <!-- <p class="subtitle">{{ proposal.ad?.title }}</p>
+      <p class="description">{{ proposal.ad?.full_address }}</p>
+      <hr> -->
+      <ul>
+        <div class="checkbox" *ngFor="let item of proposal.clauses">
+          <label>
+            <input type="checkbox">{{ item.title }}
+          </label>
+        </div>
+      </ul>
+      <hr>
+      <a>Adicionar novo requisito</a>
+      <hr>
+      <div class="btn btn-secondary" (click)="doneProposal()">Finalizar e fazer pré-contratos</div>
+    </div>
+  </div>
+</div>

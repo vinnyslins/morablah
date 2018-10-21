@@ -137,50 +137,16 @@
 <div class="group-list">
   <div class="container">
     <h2 class="white-title">Pessoas interessadas neste apê</h2>  
-    <!-- loop !-->
-    <div class="col-md-4">
-      <a routerLink="/imovel/{{this.id}}/group">
+    <div class="col-md-4" *ngFor="let group of property.groups">
+      <a routerLink="/group/{{group.id}}">
         <div class="group">
-          <img src="https://api.adorable.io/avatars/285/7" class="avatar pull-left" alt="">
+          <img [src]="group.person.avatar" class="avatar pull-left" alt="">
           <div class="group-description">
-            <p>Maurício José</p>
+            <p>{{ group.person.name }}</p>
             <p>32 anos</p>
           </div>
         </div>
       </a>
-    </div>
-
-    <!-- loop !-->
-    <div class="col-md-4">
-      <div class="group">
-        <img src="https://api.adorable.io/avatars/285/7" class="avatar pull-left" alt="">
-        <div class="group-description">
-          <p>Maurício José</p>
-          <p>32 anos</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- loop !-->
-    <div class="col-md-4">
-      <div class="group">
-        <img src="https://api.adorable.io/avatars/285/7" class="avatar pull-left" alt="">
-        <div class="group-description">
-          <p>Maurício José</p>
-          <p>32 anos</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- loop !-->
-    <div class="col-md-4">
-      <div class="group">
-        <img src="https://api.adorable.io/avatars/285/7" class="avatar pull-left" alt="">
-        <div class="group-description">
-          <p>Maurício José</p>
-          <p>32 anos</p>
-        </div>
-      </div>
     </div>
   </div>
 </div>
