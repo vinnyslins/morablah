@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PropertiesService {
-  private apiUrl = 'http://10.229.3.74:3000';
+  private apiUrl = 'https://morablah-api.herokuapp.com';
   public properties: any[] = [];
 
   constructor(private http: HttpClient) {

@@ -11,39 +11,12 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-
       <div class="item active">
         <img src="https://s3-sa-east-1.amazonaws.com/images-morablah/892852756-814.jpg">
-        <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-        </div>
       </div>
-
-      <div class="item">
-        <img src="https://s3-sa-east-1.amazonaws.com/images-morablah/892852756-814.jpg">
-        <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-        </div>
+      <div class="item" *ngFor="let image of property.images">
+        <img src="{{image.url}}">
       </div>
-
-      <div class="item">
-        <img src="https://s3-sa-east-1.amazonaws.com/images-morablah/892852756-814.jpg">
-        <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beautiful flowers in Kolymbari, Crete.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="https://s3-sa-east-1.amazonaws.com/images-morablah/892852756-814.jpg">
-        <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beautiful flowers in Kolymbari, Crete.</p>
-        </div>
-      </div>
-
     </div>
 
     <!-- Left and right controls -->
@@ -61,26 +34,16 @@
 <div class="container" style="min-height: 800px;">
   <div class="col-md-12">
     <div class="breadcrumb">
-      Sao paulo > Abc > 123 > 123
     </div>
   </div>
   <div class="row">
     <div class="col-md-8">
-      <h2>Apartamento com 2 dorm 64m²</h2>
-      <small>Rua bueno brandão</small>
+      <h2>{{property.title}}</h2>
+      <small>{{property.full_address}}</small>
 
-      <div class="list">
+      <div class="list" >
         <ul>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
+          <li *ngFor="let item of property.items">{{item.title}}</li>
         </ul>
       </div>
       <hr>
@@ -99,7 +62,7 @@
         Banheiro de serviço, Fogão incluso, Geladeira inclusa</p>
       </article>
       <hr>
-      <article>
+      <!-- <article>
         <h3 class="article-title">O que você precisa para alugar este apê</h3>
         <ul class="list circle-list">
           <li>Item</li>
@@ -114,22 +77,31 @@
           <li>Item</li>
         </ul>
       </article>
-      <hr>
-      <article>
-        <h3 class="article-title">Descrição</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-          book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-          with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </article>
-
-
+      <hr> -->
     </div>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading">Panel Heading</div>
-        <div class="panel-body">Panel Content</div>
+        <div class="panel-heading">
+          <h5>Este apartamento suporta apenas duas pessoas</h5>
+          <img src="https://s3-sa-east-1.amazonaws.com/images-morablah/download.png" style="display: inline-block; width: 50px;" class="img-circle" alt="">
+          <img src="https://s3-sa-east-1.amazonaws.com/images-morablah/download.png"  style="margin-left: 10px;display: inline-block; width: 50px;" class="img-circle" alt="">
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">Alguel total</div>
+            <div class="col-md-6" style="text-align:right;margin-bottom: 5px;">R$ {{ property.amount }}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">Condomínio</div>
+            <div class="col-md-6" style="text-align:right;margin-bottom: 5px;">R$ 2000</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">Alguel total</div>
+            <div class="col-md-6" style="text-align:right;margin-bottom: 5px;">R$ 2000</div>
+          </div>
+          <hr>
+          <h4>Valor <strong>R$ {{property.amount / 2}}</strong> médio para duas pessoas</h4>
+        </div>
       </div>
     </div> 
   </div>

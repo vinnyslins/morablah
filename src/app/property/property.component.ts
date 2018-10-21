@@ -24,6 +24,7 @@ export class PropertyComponent implements OnInit {
         if (!response) {
           this.router.navigate(['/not-found']);
         }
+        console.log(response);
         this.property = response;
       }).catch(error => {
         // @TODO: Redirecionar para página de erro

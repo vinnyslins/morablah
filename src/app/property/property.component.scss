@@ -40,8 +40,13 @@
 }
 
 .list{
-  &.circle-list{
-    list-style: none;
+  margin-top: 30px;
+
+  ul{
+    li{
+      text-transform: capitalize;
+      line-height: 30px;
+    }
   }
 }
 
@@ -79,4 +84,9 @@
       padding: 0;
     }
   }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
