@@ -1,0 +1,78 @@
+@import "../../styles/global/variables";
+@import "../../styles/global/variables";
+
+#myCarousel{
+  max-height: 450px;
+  .item{
+    max-height: 450px;
+    img{
+      width: 100%;
+      max-height: 450px;
+    }
+  }
+}
+
+.breadcrumb{
+  min-height: 40px;
+  font-size: 16px;
+  background: transparent;
+}
+
+.list{
+  ul {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
+
+.panel-heading{
+  background: #2261cd;
+  color: #fff;
+}
+
+.article-title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.list{
+  &.circle-list{
+    list-style: none;
+  }
+}
+
+
+.group-list{
+  margin-top: 15px;
+  min-height: 100px;
+  padding: 50px 0;
+  background: map-get($colors, 'primary');
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.white-title{
+  color: #fff;
+  margin-bottom: 35px;
+}
+.group{
+  margin-bottom: 15px;
+  .group-description {
+    color: #fff;
+
+    p {
+      margin: 0;
+      margin-left: 65px;
+      padding: 0;
+    }
+  }
+}

@@ -11,12 +11,14 @@ import { PropertyComponent } from './property/property.component';
 import { ChatComponent } from './chat/chat.component';
 import { ContractComponent } from './contract/contract.component';
 import { SearchComponent } from './search/search.component';
+import { GroupComponent } from './group/group.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', redirectTo: '/', pathMatch: 'full' },
   { path: 'resultado-de-busca', component: SearchResultComponent },
-  { path: 'imovel', component: PropertyComponent },
+  { path: 'imovel/:id', component: PropertyComponent },
+  { path: 'group/:id', component: GroupComponent },
   { path: 'chat', component: ChatComponent },
   { path: 'contrato', component: ContractComponent },
   { path: '**', component: NotFoundComponent }
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     PropertyComponent,
     ChatComponent,
     ContractComponent,
-    SearchComponent
+    SearchComponent,
+    GroupComponent
   ],
   imports: [
     BrowserModule,
