@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PropertiesService } from 'src/services/properties.service';
 
 @Component({
   selector: 'app-search-result',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
+  public filters: string[] = [
+    'Aceita pet',
+    'Piscina',
+    'Perto do metrô'
+  ];
 
-  constructor() { }
+  constructor(public propertiesService: PropertiesService) { }
 
   ngOnInit() {
   }

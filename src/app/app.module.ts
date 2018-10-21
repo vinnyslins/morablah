@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import ptBr from '@angular/common/locales/pt';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +14,9 @@ import { PropertyComponent } from './property/property.component';
 import { ChatComponent } from './chat/chat.component';
 import { ContractComponent } from './contract/contract.component';
 import { SearchComponent } from './search/search.component';
+import { FooterComponent } from './footer/footer.component';
+
+registerLocaleData(ptBr);
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,13 +38,17 @@ const appRoutes: Routes = [
     PropertyComponent,
     ChatComponent,
     ContractComponent,
-    SearchComponent
+    SearchComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

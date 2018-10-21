@@ -1,3 +1,37 @@
-<p>
-  search-result works!
-</p>
+<app-search></app-search>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-sm-8">
+        <span>Seus filtros</span>
+        <span *ngFor="let item of filters" class="item"><i class="fas fa-times"></i> {{ item }}</span>
+      </div>
+      <div class="col-sm-4 content-right">
+        <span>Ordenar por </span>
+        <span class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mais barato <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="resultado-de-busca">Mais barato</a></li>
+            <li><a href="resultado-de-busca">Mais caro</a></li>
+            <li><a href="resultado-de-busca">Mais perto</a></li>
+            <li><a href="resultado-de-busca">Mais longe</a></li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="row content">
+        <div *ngFor="let property of propertiesService.properties" class="card col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <a routerLink="/imovel/{{property.id}}">
+            <img src="https://www.quintoandar.com.br/img/med/892852756-814.8412197111393IMG1518.jpg">
+            <p class="title">Aluguel {{ property.rent | currency: 'BRL' }}</p>
+            <p class="description">Valor total {{ property.amount | currency: 'BRL' }} | {{ property.max_people }} pessoas</p>
+            <p class="description">{{ property.full_address }}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
